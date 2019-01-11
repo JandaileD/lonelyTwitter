@@ -6,15 +6,23 @@ public class sad extends model
 {
     private String current_date;
 
-    public void setDate()
+    public sad()
     {
-        Date date = new Date();
+        this.current_date = this.getDate();
+    }
+
+    public void setDate(Date date)
+    {
         this.current_date = date.toString();
     }
 
-    public void adjust_mood()
+    public String getDate()
     {
-        this.setDate();
-        String current_mood = this.current_date + "Sad.";
+        return this.current_date;
+    }
+
+    public String adjust_mood()
+    {
+        return this.current_date + "Sad.";
     }
 }
